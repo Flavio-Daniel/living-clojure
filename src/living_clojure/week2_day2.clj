@@ -20,10 +20,10 @@
       (is (= true (half-true true true true false)))))
 
   (testing "Greatest Common Divisor"
-    (let [gcd (fn
-
-
-                )]
+    (let [gcd (fn gcd- [n m]
+                (if (= (mod n m) 0)
+                  m
+                  (recur m (mod n m))))]
       (is (= (gcd 2 4) 2))
       (is (= (gcd 10 5) 5))
       (is (= (gcd 5 7) 1))
