@@ -13,6 +13,8 @@
       (is (= (sim-diff #{[1 2] [2 3]} #{[2 3] [3 4]}) #{[1 2] [3 4]}))))
 
   (testing "Least Common Multiple"
+    "had to look the answer of this, then found out:
+    https://artofproblemsolving.com/wiki/index.php/Least_common_multiple"
     (let [lcm (fn [& args]
                 (let [gcd (fn [n m] (if (= (mod n m) 0)
                               m
