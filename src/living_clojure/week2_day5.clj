@@ -4,6 +4,7 @@
 (deftest day-5-tests
 
   (testing "Pascal’s Triangle"
+    ;; I must try to refactor it to simplyfy it
     (let [p-triangle (fn p-triangle
                        ([rows]
                         (p-triangle rows 1 [1]))
